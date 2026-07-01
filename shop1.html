@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Shop App</title>
+</head>
+<body>
+
+<h2>🛒 My Product Shop</h2>
+
+<div id="products"></div>
+
+<script>
+// ✅ STEP 1: Products list (यहाँ से add होगा)
+let products = [
+  {
+    id: 1,
+    name: "Surya LED Bulb",
+    price: 100,
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4"
+  }
+];
+
+// ✅ STEP 2: Product show करने का code
+function showProducts(){
+  let box = "";
+
+  products.forEach(p => {
+    box += `
+      <div style="border:1px solid #000; padding:10px; margin:10px; width:200px;">
+        <img src="${p.image}" width="150">
+        <h3>${p.name}</h3>
+        <p>₹${p.price}</p>
+        <button onclick="alert('Order done: ${p.name}')">Order</button>
+      </div>
+    `;
+  });
+
+  document.getElementById("products").innerHTML = box;
+}
+
+showProducts();
+</script>
+
+</body>
+</html>
