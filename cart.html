@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cart - Raj Electronic</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
-<body>
+
+<body onload="loadCart()">
 
 <header class="header">
 <h1>🛒 My Cart</h1>
@@ -14,8 +16,20 @@
 </header>
 
 <div class="banner">
-<h2>आपकी Cart अभी खाली है</h2>
-<p>जल्द ही यहाँ आपके चुने हुए प्रोडक्ट दिखाई देंगे।</p>
+<h2>Your Selected Items</h2>
+</div>
+
+<!-- CART ITEMS -->
+<div id="cartList" style="padding:10px;"></div>
+
+<!-- TOTAL -->
+<h2 id="total" style="text-align:center;"></h2>
+
+<!-- ORDER BUTTON -->
+<div style="text-align:center;margin:20px;">
+<button onclick="sendOrder()" style="padding:15px;background:green;color:white;border:none;border-radius:10px;font-size:18px;">
+📦 Order on WhatsApp
+</button>
 </div>
 
 <nav class="bottom">
