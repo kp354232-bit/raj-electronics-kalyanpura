@@ -1,41 +1,28 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html>
 <head>
-<meta charset="UTF-8">
+<title>Cart</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cart - Raj Electronic</title>
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
 
 <body onload="loadCart()">
 
-<header class="header">
-<h1>🛒 My Cart</h1>
-<p>Raj Electronic</p>
-</header>
-
-<!-- CART LIST -->
-<div id="cartList" style="padding:10px;"></div>
-
-<!-- TOTAL -->
-<h2 id="total" style="text-align:center;"></h2>
-
-<!-- ORDER BUTTON -->
-<div style="text-align:center;margin:20px;">
-<button onclick="sendOrder()" 
-style="padding:15px;background:green;color:white;border:none;border-radius:10px;font-size:18px;">
-📦 Order on WhatsApp
-</button>
+<div class="header">
+<h2>🛒 Your Cart</h2>
 </div>
 
-<nav class="bottom">
-<a href="index.html">🏠<br>Home</a>
-<a href="products.html">🛍️<br>Products</a>
-<a href="cart.html">🛒<br>Cart</a>
-<a href="orders.html">📦<br>Orders</a>
-<a href="profile.html">👤<br>Profile</a>
-</nav>
+<div id="cartList"></div>
+
+<h2 id="total" style="text-align:center;"></h2>
+
+<div style="text-align:center;margin:20px;">
+<button onclick="sendOrder()"
+style="padding:15px;background:green;color:white;border:none;border-radius:10px;">
+Place Order
+</button>
+</div>
 
 </body>
 </html>
