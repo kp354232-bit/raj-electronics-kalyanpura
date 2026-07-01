@@ -48,6 +48,6 @@ function sendOrder() {
         msg += `${item.name} - ₹${item.price}\n`;
     });
 
-    let phone = "917952144747";
+    llet phone = "919752144747";
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
 }
