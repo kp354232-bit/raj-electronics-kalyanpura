@@ -18,20 +18,40 @@
 <div class="banner">
 <h2>Welcome</h2>
 <p>TV | Cooler | Fan | LED | Electronics</p>
-</div>
+</
+<!DOCTYPE html>
+<html>
+<body>
 
-<div class="buttons">
-<a href="tel:9752144747" class="call">📞 Call Now</a>
-<a href="https://wa.me/919752144747" class="whatsapp">💬 WhatsApp</a>
-</div>
+<h2>My Shop</h2>
 
-<nav class="bottom">
-<a href="index.html">🏠<br>Home</a>
-<a href="products.html">🛍️<br>Products</a>
-<a href="cart.html">🛒<br>Cart</a>
-<a href="orders.html">📦<br>Orders</a>
-<a href="profile.html">👤<br>Profile</a>
-</nav>
+<div id="products"></div>
+
+<script>
+
+let products = [
+  {
+    name: "Surya LED Bulb",
+    price: 100,
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4"
+  }
+];
+
+let box = "";
+
+for(let i=0; i<products.length; i++){
+  box += `
+    <div style="border:1px solid black; margin:10px; padding:10px; width:200px;">
+      <img src="${products[i].image}" width="150">
+      <h3>${products[i].name}</h3>
+      <p>₹${products[i].price}</p>
+    </div>
+  `;
+}
+
+document.getElementById("products").innerHTML = box;
+
+</script>
 
 </body>
 </html>
