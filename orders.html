@@ -3,26 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orders - Raj Electronic</title>
+<title>Orders Dashboard</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="loadOrders()">
 
 <header class="header">
-<h1>📦 My Orders</h1>
+<h1>📦 Orders Dashboard</h1>
 <p>Raj Electronic</p>
 </header>
 
-<div class="banner">
-<h2>Orders System</h2>
-<p>WhatsApp orders directly send ho rahe hain</p>
-</div>
-
-<div style="padding:15px;text-align:center;">
-<p>👉 Tumhare orders ab directly WhatsApp par ja rahe hain</p>
-<p>📲 Check your WhatsApp: 9752144747</p>
-</div>
+<div id="ordersList" style="padding:10px;"></div>
 
 <nav class="bottom">
 <a href="index.html">🏠<br>Home</a>
