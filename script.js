@@ -128,3 +128,23 @@ function deleteProduct(index) {
     localStorage.setItem("products", JSON.stringify(products));
     loadAdmin();
 }
+function loadProducts() {
+    let list = document.getElementById("productList");
+    if (!list) return;
+
+    let products = JSON.parse(localStorage.getItem("products")) || [];
+
+    list.innerHTML = "";
+
+    products.forEach((p, i) => {
+        list.innerHTML += `
+        <div class="card">
+            <h3>${p.name}</h3>
+            <p>₹${p.price}</p>
+            <button onclick="addToCart('${p.name}',${p.price})">
+                🛒 Add to Cart
+            </button>
+        </div>
+        `;
+    });
+}
