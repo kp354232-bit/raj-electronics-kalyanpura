@@ -8,51 +8,24 @@
 <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="loadProducts()">
 
 <header class="header">
 <h1>🛍️ Products</h1>
 <p>Raj Electronic</p>
 </header>
 
-<!-- SEARCH -->
-<div style="padding:10px;">
-<input type="text" id="searchBox" placeholder="Search product..."
-style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;"
-onkeyup="searchProduct()">
-</div>
+<input id="searchBox" onkeyup="searchProduct()" 
+placeholder="Search product..."
+style="width:95%;padding:10px;margin:10px;border-radius:8px;border:1px solid #ccc;">
 
-<!-- PRODUCTS -->
-<div id="productList" style="padding:10px;">
-
-<div class="card">
-<img src="https://via.placeholder.com/300x200" />
-<h3>LED TV</h3>
-<p>₹12000</p>
-<button onclick="addToCart('LED TV',12000)">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/300x200" />
-<h3>Cooler</h3>
-<p>₹8000</p>
-<button onclick="addToCart('Cooler',8000)">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/300x200" />
-<h3>Fan</h3>
-<p>₹1500</p>
-<button onclick="addToCart('Fan',1500)">Add to Cart</button>
-</div>
-
-</div>
+<div id="productList"></div>
 
 <nav class="bottom">
 <a href="index.html">🏠<br>Home</a>
 <a href="products.html">🛍️<br>Products</a>
 <a href="cart.html">🛒<br>Cart</a>
-<a href="orders.html">📦<br>Orders</a>
+<a href="admin.html">👨‍💼<br>Admin</a>
 <a href="profile.html">👤<br>Profile</a>
 </nav>
 
