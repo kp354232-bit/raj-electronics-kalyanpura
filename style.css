@@ -1,87 +1,52 @@
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
+margin:0;
+font-family:Arial;
+background:#f5f5f5;
 }
 
 .header{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:#0d6efd;
+color:white;
+text-align:center;
+padding:20px;
 }
 
 .banner{
-    margin:15px;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 2px 8px rgba(0,0,0,.15);
-}
-
-.buttons{
-    padding:15px;
+margin:15px;
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
 }
 
 .buttons a{
-    display:block;
-    text-decoration:none;
-    text-align:center;
-    padding:15px;
-    margin-bottom:10px;
-    color:white;
-    border-radius:10px;
-    font-size:18px;
+display:block;
+margin:10px;
+padding:15px;
+background:green;
+color:white;
+text-decoration:none;
+text-align:center;
+border-radius:10px;
+font-size:18px;
 }
 
-.call{
-    background:green;
-}
-
-.whatsapp{
-    background:#25D366;
-}
+.whatsapp{background:#25D366;}
 
 .bottom{
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    background:white;
-    display:flex;
-    justify-content:space-around;
-    padding:10px 0;
-    box-shadow:0 -2px 8px rgba(0,0,0,.2);
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+display:flex;
+justify-content:space-around;
+background:white;
+padding:10px;
 }
 
 .bottom a{
-    text-decoration:none;
-    color:black;
-    text-align:center;
-    font-size:14px;
-}
-
-/* PRODUCTS CARD */
-.card{
-    background:white;
-    margin:10px;
-    padding:10px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-}
-
-.card img{
-    width:100%;
-    border-radius:10px;
-}
-
-.card button{
-    background:green;
-    color:white;
-    border:none;
-    padding:10px;
-    border-radius:8px;
-    width:100%;
+text-decoration:none;
+color:black;
+font-size:14px;
+text-align:center;
 }
