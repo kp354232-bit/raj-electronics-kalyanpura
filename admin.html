@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - Raj Electronic</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+<h1>👨‍💼 Admin Panel</h1>
+<p>Raj Electronic</p>
+</header>
+
+<div class="banner">
+<h2>Add New Product</h2>
+</div>
+
+<div style="padding:10px;">
+
+<input id="pname" placeholder="Product Name" style="width:100%;padding:10px;margin:5px;">
+<input id="pprice" placeholder="Price" type="number" style="width:100%;padding:10px;margin:5px;">
+
+<button onclick="addProduct()" 
+style="width:100%;padding:15px;background:green;color:white;border:none;border-radius:10px;">
+➕ Add Product
+</button>
+
+</div>
+
+<div class="banner">
+<h2>Products List</h2>
+</div>
+
+<div id="adminList" style="padding:10px;"></div>
+
+<nav class="bottom">
+<a href="index.html">🏠<br>Home</a>
+<a href="products.html">🛍️<br>Products</a>
+<a href="cart.html">🛒<br>Cart</a>
+<a href="admin.html">👨‍💼<br>Admin</a>
+<a href="profile.html">👤<br>Profile</a>
+</nav>
+
+</body>
+</html>
