@@ -3,26 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profile - Raj Electronic</title>
+<title>Products - Raj Electronic</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
+
 <body>
 
 <header class="header">
-<h1>👤 Profile</h1>
+<h1>🛍️ Products</h1>
 <p>Raj Electronic</p>
 </header>
 
-<div class="banner">
-<h2>Owner Details</h2>
-<p><b>Shop:</b> Raj Electronic</p>
-<p><b>Address:</b> Gujri Bazar, Kalyanpura, Jhabua Bypass Road</p>
-<p><b>Phone:</b> 9752144747</p>
+<!-- SEARCH -->
+<input id="searchBox" onkeyup="searchProduct()" placeholder="Search product..."
+style="width:95%;padding:10px;margin:10px;border-radius:8px;border:1px solid #ccc;">
+
+<!-- PRODUCTS -->
+
+<div class="card">
+<img src="https://via.placeholder.com/300x200">
+<h3>LED TV</h3>
+<p>₹12000</p>
+<button onclick="addToCart('LED TV',12000)">🛒 Add to Cart</button>
 </div>
 
-<div class="buttons">
-<a href="tel:9752144747" class="call">📞 Call Now</a>
-<a href="https://wa.me/919752144747" class="whatsapp">💬 WhatsApp</a>
+<div class="card">
+<img src="https://via.placeholder.com/300x200">
+<h3>Cooler</h3>
+<p>₹8000</p>
+<button onclick="addToCart('Cooler',8000)">🛒 Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300x200">
+<h3>Fan</h3>
+<p>₹1500</p>
+<button onclick="addToCart('Fan',1500)">🛒 Add to Cart</button>
 </div>
 
 <nav class="bottom">
