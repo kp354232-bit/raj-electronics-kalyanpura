@@ -5,17 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Products - Raj Electronic</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
+
 <body>
 
 <header class="header">
-<h1>Raj Electronic</h1>
-<p>Our Products</p>
+<h1>🛍️ Products</h1>
+<p>Raj Electronic</p>
 </header>
 
 <div class="banner">
-<h2>Products Coming Soon</h2>
-<p>जल्द ही यहाँ सभी प्रोडक्ट दिखाई देंगे।</p>
+<h2>Our Products</h2>
+<p>Select items and add to cart</p>
+</div>
+
+<!-- PRODUCTS LIST -->
+<div style="padding:10px;">
+
+<div style="background:white;padding:10px;margin:10px;border-radius:10px;">
+<h3>LED TV</h3>
+<p>₹12000</p>
+<button onclick="addToCart('LED TV',12000)">🛒 Add to Cart</button>
+</div>
+
+<div style="background:white;padding:10px;margin:10px;border-radius:10px;">
+<h3>Cooler</h3>
+<p>₹8000</p>
+<button onclick="addToCart('Cooler',8000)">🛒 Add to Cart</button>
+</div>
+
+<div style="background:white;padding:10px;margin:10px;border-radius:10px;">
+<h3>Fan</h3>
+<p>₹1500</p>
+<button onclick="addToCart('Fan',1500)">🛒 Add to Cart</button>
+</div>
+
 </div>
 
 <nav class="bottom">
