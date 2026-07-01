@@ -1,55 +1,109 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Raj Electronic</title>
+</head>
+
 <body>
 
-<h2>🛒 My Shop</h2>
+<h1>🛒 Raj Electronic</h1>
+<p>📍 Jhabua By Pass Road, Gujri Bazar, Kalyanpura</p>
+
+<h3>🛍 Products</h3>
 
 <div id="products"></div>
 
+<h3>🧺 Cart</h3>
+<div id="cart"></div>
+
+<button onclick="placeOrder()">Order on WhatsApp</button>
+
 <script>
 
-// ✅ WhatsApp number (तुम्हारा नंबर सेट हो गया)
 let myNumber = "919752144747";
 
-// ✅ Products
+// 🔥 PRODUCTS
 let products = [
-  {
-    name: "Surya LED Bulb",
-    price: 100,
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4"
-  }
+  { id:1, name:"Surya LED Bulb", price:100, image:"https://images.unsplash.com/photo-1621905252507-b35492cc74b4" },
+  { id:2, name:"Switch Board", price:50, image:"https://images.unsplash.com/photo-1581092160607-ee22621dd758" }
 ];
 
-// ✅ Show products
-let box = "";
+// 🧺 CART
+let cart = [];
 
-for(let i = 0; i < products.length; i++){
-  box += `
-    <div style="border:1px solid black; padding:10px; margin:10px; width:200px;">
-      <img src="${products[i].image}" width="150">
-      <h3>${products[i].name}</h3>
-      <p>₹${products[i].price}</p>
+// SHOW PRODUCTS
+function showProducts(){
 
-      <button onclick="orderNow('${products[i].name}', ${products[i].price})">
-        Order on WhatsApp
-      </button>
-    </div>
-  `;
+  let box = "";
+
+  for(let i=0; i<products.length; i++){
+    box += `
+      <div style="border:1px solid black; padding:10px; margin:10px; width:220px;">
+        <img src="${products[i].image}" width="150">
+        <h3>${products[i].name}</h3>
+        <p>₹${products[i].price}</p>
+
+        <button onclick="addToCart(${products[i].id})">
+          Add to Cart
+        </button>
+      </div>
+    `;
+  }
+
+  document.getElementById("products").innerHTML = box;
 }
 
-document.getElementById("products").innerHTML = box;
+// ADD TO CART
+function addToCart(id){
 
-// ✅ WhatsApp Order Function
-function orderNow(name, price){
+  let item = products.find(p => p.id === id);
+  cart.push(item);
 
-  let message = "Hello, मुझे order करना है:%0A"
-              + "Product: " + name + "%0A"
-              + "Price: ₹" + price;
+  showCart();
+}
+
+// SHOW CART
+function showCart(){
+
+  let box = "";
+  let total = 0;
+
+  for(let i=0; i<cart.length; i++){
+    box += `<p>${cart[i].name} - ₹${cart[i].price}</p>`;
+    total += cart[i].price;
+  }
+
+  box += "<h4>Total: ₹" + total + "</h4>";
+
+  document.getElementById("cart").innerHTML = box;
+}
+
+// ORDER ON WHATSAPP
+function placeOrder(){
+
+  if(cart.length == 0){
+    alert("Cart empty");
+    return;
+  }
+
+  let message = "🛒 Order from Raj Electronic:%0A";
+
+  let total = 0;
+
+  for(let i=0; i<cart.length; i++){
+    message += cart[i].name + " - ₹" + cart[i].price + "%0A";
+    total += cart[i].price;
+  }
+
+  message += "%0ATotal: ₹" + total;
+  message += "%0A📍 Jhabua By Pass Road, Kalyanpura";
 
   let url = "https://wa.me/" + myNumber + "?text=" + message;
 
   window.open(url, "_blank");
 }
+
+showProducts();
 
 </script>
 
